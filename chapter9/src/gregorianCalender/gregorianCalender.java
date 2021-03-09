@@ -18,8 +18,5 @@ public class gregorianCalender {
         day = gregorianCalendar.get(GregorianCalendar.DAY_OF_MONTH);
 
         System.out.println("The current date is " + year + "/" + month + "/" + day);
-
-
     }
-
 }

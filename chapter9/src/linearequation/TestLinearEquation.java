@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class TestLinearEquation {
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
-        System.out.println("Please enter the value of a,b,c,d,e,f. After enter a value, press Enter.");
+        System.out.println("Please enter the value of a,b,c,d,e,f.");
         double a = in.nextDouble();
         double b = in.nextDouble();
         double c = in.nextDouble();
