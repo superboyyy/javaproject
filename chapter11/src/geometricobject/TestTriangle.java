@@ -11,7 +11,7 @@ public class TestTriangle {
         double side3 = in.nextDouble();
 
         System.out.println("Enter the color of the triangle: ");
-        String color = in.nextLine();
+        String color = in.next();
 
         System.out.println("Whether the triangle is filled ( true / false ): ");
         boolean isFilled = in.nextBoolean();
@@ -24,6 +24,7 @@ public class TestTriangle {
 
         System.out.println("The area of the triangle is " + triangle.getArea());
         System.out.println("The perimeter of the triangle is " + triangle.getPerimeter());
+        System.out.println("The color of the triangle is " + triangle.getColor());
         System.out.println("The boolean of isFilled is " + triangle.isFilled());
     }
 }
