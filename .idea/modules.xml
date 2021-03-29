@@ -2,15 +2,11 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-<<<<<<< HEAD
-      <module fileurl="file://$PROJECT_DIR$/chapter9/chapter9.iml" filepath="$PROJECT_DIR$/chapter9/chapter9.iml" />
-      <module fileurl="file://$PROJECT_DIR$/javaproject.iml" filepath="$PROJECT_DIR$/javaproject.iml" />
-=======
+      <module fileurl="file://$PROJECT_DIR$/chapter10/chapter10.iml" filepath="$PROJECT_DIR$/chapter10/chapter10.iml" />
       <module fileurl="file://$PROJECT_DIR$/chapter11/chapter11.iml" filepath="$PROJECT_DIR$/chapter11/chapter11.iml" />
       <module fileurl="file://$PROJECT_DIR$/chapter13/chapter13.iml" filepath="$PROJECT_DIR$/chapter13/chapter13.iml" />
-      <module fileurl="file://$PROJECT_DIR$/datastructure/datastructure.iml" filepath="$PROJECT_DIR$/datastructure/datastructure.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/javaproject.iml" filepath="$PROJECT_DIR$/.idea/javaproject.iml" />
->>>>>>> origin/master
+      <module fileurl="file://$PROJECT_DIR$/chapter9/chapter9.iml" filepath="$PROJECT_DIR$/chapter9/chapter9.iml" />
+      <module fileurl="file://$PROJECT_DIR$/javaproject.iml" filepath="$PROJECT_DIR$/javaproject.iml" />
     </modules>
   </component>
 </project>
