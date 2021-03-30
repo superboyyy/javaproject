@@ -1,6 +1,7 @@
 package primefactors;
 
 import java.util.Scanner;
+import java.util.Arrays;
 
 public class PrimeFactors {
     public static void main(String[] args) {
@@ -9,19 +10,25 @@ public class PrimeFactors {
         int x = in.nextInt();
         StackOfIntegers stackOfIntegers = new StackOfIntegers(x);
 
-        System.out.print("All the prime factors of the "+integer+ " are :");
-        System.out.print(Arrays.toString(i));
-    }
+        System.out.print("All the prime factors of the "+ x + " are :");
 
-    public boolean isPrime(int x) {
-        for (int i = 2; i <= x / 2; i++) {
-            if (x % i == 0) {
-                return false;
-                break;
+        int initialnum = 2;
+        while (initialnum <= x) {
+            if (x % initialnum == 0) {
+                x /= initialnum;
+                stackOfIntegers.push(initialnum);
             }
             else
-                return true;
+                initialnum++;
+        }
+
+        while (!stackOfIntegers.empty()) {
+            System.out.print(stackOfIntegers.pop() + " ");
         }
     }
+
+
+
+
 
 }
