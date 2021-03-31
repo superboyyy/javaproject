@@ -10,7 +10,7 @@ public class Course {
     }
 
     public void addStudent(String student) {
-        if (numberOfStudents == students.length) {
+        if (numberOfStudents >= students.length) {
             String[] bigStudents = new String[students.length * 2];
             System.arraycopy(students, 0 , bigStudents, 0, students.length);
 
