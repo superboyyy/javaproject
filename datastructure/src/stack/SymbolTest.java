@@ -19,18 +19,15 @@ public class SymbolTest {
             String readStr = String.valueOf(charArr[i]);
             if (isOpenSymbol(readStr)) {                    //是开放符号，压入栈中
                 stack.push(readStr);
-            }
-            else if (isCloseSymbol(readStr)) {            //是关闭符号再执行，其他字符忽略
+            } else if (isCloseSymbol(readStr)) {            //是关闭符号再执行，其他字符忽略
                 if (stack.isEmpty()) {                      //栈为空，证明字符擦混中只有关闭符号，返回false
                     in.close();
                     return false;
-                }
-                else {                                    //符号不是一对，返回false
+                } else {                                    //符号不是一对，返回false
                     if (!isTwin(stack.peek(), readStr)) {
                         in.close();
                         return false;
-                    }
-                    else {                                //符号是一对，将符号弹出栈
+                    } else {                                //符号是一对，将符号弹出栈
                         stack.pop();
                     }
                 }
@@ -44,6 +41,7 @@ public class SymbolTest {
             return true;
         }
     }
+
     /**
      * 判断是不是开放符号（也就是括号的左半个）
      */
@@ -53,6 +51,7 @@ public class SymbolTest {
             return true;
         return false;
     }
+
     /**
      * 判断是不是关闭符号（也就是括号的右半个）
      */
@@ -62,6 +61,7 @@ public class SymbolTest {
             return true;
         return false;
     }
+
     /**
      * 判断符号是否是一对
      */
