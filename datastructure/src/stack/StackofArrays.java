@@ -1,24 +1,24 @@
 package stack;
 
-public class Stack {
-    private int[] elements;
+public class StackofArrays {
+    private Object[] elements;
     private int size;
     public static final int DEFAULT_CAPACITY = 16;
 
     /** Construct a stack with the default capacity 16 */
-    public Stack() {
+    public StackofArrays() {
         this(DEFAULT_CAPACITY);
     }
 
     /** Construct a stack with the specified maximum capacity */
-    public Stack(int capacity) {
-        elements = new int[capacity];
+    public StackofArrays(int capacity) {
+        elements = new Object[capacity];
     }
 
     /** Push a new integer to the top of the stack */
     public void push(int value) {
         if (size >= elements.length) {
-            int[] temp = new int[elements.length * 2];
+            Object[] temp = new Object[elements.length * 2];
             System.arraycopy(elements, 0, temp, 0, elements.length);
             elements = temp;
         }
@@ -27,12 +27,12 @@ public class Stack {
     }
 
     /** Return and remove the top element from the stack */
-    public int pop() {
+    public Object pop() {
         return elements[--size];
     }
 
     /** Return the top element from the stack */
-    public int peek() {
+    public Object peek() {
         return elements[size - 1];
     }
 
