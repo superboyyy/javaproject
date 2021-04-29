@@ -45,6 +45,15 @@ public class String {
         return new String(temp);
     }
 
+    public String toUppercase() {
+        char[] temp = new char[chars.length];
+        for (int i = 0; i < chars.length; i++) {
+            temp[i] = Character.toUpperCase(chars[i]);
+        }
+
+        return new String(temp);
+    }
+
     public static String valueOf(int i) {
         char[] temp = new char[40];
         int size = 0;
@@ -63,27 +72,10 @@ public class String {
         return new String(temp2);
     }
 
-
-
-    public int compare(String s) {
-        return 1;
-    }
-
-    public String toUppercase() {
-        char[] temp = new char[chars.length];
-        for (int i = 0; i < chars.length; i++) {
-            temp[i] = Character.toUpperCase(chars[i]);
-        }
-
-        return new String(temp);
-    }
-
     public static String valueOf(boolean d) {
         if (d)
             return new String(new char[]{'t', 'r', 'u', 'e'});
         else
             return new String(new char[]{'f', 'a', 'l', 's', 'e'});
     }
-
-
 }
