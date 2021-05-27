@@ -7,7 +7,7 @@ public class RemoveText {
     public static void main(String[] args) throws Exception {
 //         Check command line parameter usage
         if (args.length != 2) {
-            System.out.println("Usage: java Exercise12_11 stringToBeRemoved sourceFile");
+            System.out.println("Usage: java RemoveText stringToBeRemoved sourceFile");
             System.exit(1);
         }
 
