@@ -1,6 +1,6 @@
 package geometricobject;
 
-public abstract class GeometricObject {
+public abstract class GeometricObject implements Comparable<GeometricObject>{
     private String color = "white";
     private boolean filled;
     private java.util.Date dateCreated;
@@ -40,6 +40,25 @@ public abstract class GeometricObject {
     /** Get dateCreated */
     public java.util.Date getDateCreated() {
         return dateCreated;
+    }
+
+    public int compareTo(GeometricObject o) {
+        if (getArea() < o.getArea()) {
+            return -1;
+        }
+        else if (getArea() > o.getArea()) {
+            return 1;
+        }
+        else
+            return 0;
+    }
+
+    public static GeometricObject max(GeometricObject a, GeometricObject b) {
+        if (a.compareTo(b) > 0) {
+            return a;
+        }
+        else
+            return b;
     }
 
     @Override
