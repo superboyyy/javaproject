@@ -1,4 +1,6 @@
-package courseclass;
+package Course;
+
+import java.lang.reflect.Array;
 
 public class Course {
     private String courseName;
@@ -10,24 +12,23 @@ public class Course {
     }
 
     public void addStudent(String student) {
-        if (numberOfStudents >= students.length) {
-            String[] bigStudents = new String[students.length * 2];
-            System.arraycopy(students, 0 , bigStudents, 0, students.length);
-
-            bigStudents[numberOfStudents] = student;
-            numberOfStudents++;
-
-            students = bigStudents;
+        if (numberOfStudents == students.length) {
+            String[] newStudents = new String[students.length * 2];
+            for (int i = 0; i < numberOfStudents; i++) {
+                newStudents[i] = students[i];
+            }
+            students = newStudents;
         }
             students[numberOfStudents] = student;
             numberOfStudents++;
-
     }
 
     public String[] getStudents() {
         String[] newStudents = new String[numberOfStudents];
-        System.arraycopy(students, 0 , newStudents, 0 ,numberOfStudents);
-        return newStudents;
+        for (int i = 0; i < numberOfStudents; i++) {
+            newStudents[i] = students[i];
+        }
+        return students;
     }
 
     public int getNumberOfStudents() {
@@ -41,16 +42,11 @@ public class Course {
     public void dropStudent(String student) {
         for (int i = 0; i < students.length; i++) {
             if (students[i] == student) {
-                for (int j = i + 1; j < students.length; j++) {
-                    students[j - 1] = students[j];
+                for (int j = i; j < students.length; j++) {
+                    students[j] = students[j+1];
                 }
                 numberOfStudents--;
             }
         }
-    }
-
-    public void clear() {
-        students = null;
-        numberOfStudents = 0;
     }
 }

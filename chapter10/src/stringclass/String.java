@@ -41,7 +41,6 @@ public class String {
         for (int i = 0; i < chars.length; i++) {
             temp[i] = Character.toLowerCase(chars[i]);
         }
-
         return new String(temp);
     }
 
